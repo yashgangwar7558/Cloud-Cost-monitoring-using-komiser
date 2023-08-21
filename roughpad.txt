@@ -1,0 +1,7 @@
+TO RUN
+1. set the provider to default aws profile
+2. Terraform apply
+3. ssh into instance locally -> ssh -i ~/.ssh/komiser-aws ubuntu@ec2-34-199-172-140.compute-1.amazonaws.com
+4. in ec2 user -> pwd , cd ../.. , ls -> to get cloned repo files
+5. Update the ip in inventory.yaml
+6. test ansible working with playbook-test.yaml -> ansible-playbook -i inventory.yaml playbook-test.yaml

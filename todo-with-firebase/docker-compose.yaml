@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    image: yashgangwar123/todo-app:latest-from-github-action
+    container_name: todo-app
+    ports:
+      - 3000:3000

@@ -1,0 +1,15 @@
+ apiVersion: v1
+ # Specifying the kind as Service 
+ # because we want to define our pod type to communicate with each other inside the cluster
+ kind: Service
+ metadata:
+   name: todo-app-svc
+ spec:
+   selector:
+     app: todo-app
+   ports:
+   - port: 3000
+     targetPort: 3000
+   # To create stable IP address that is accessible from nodes in the cluster
+   # If we'll not define the type of service then it'll be ClusterIP by default
+   type: ClusterIP  

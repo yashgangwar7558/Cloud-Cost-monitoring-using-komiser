@@ -1,0 +1,8 @@
+@media screen and (max-width: 600px) {
+    .login-btn {
+        display: none;
+    }
+    .signup-btn {
+        display: none;
+    }
+  }

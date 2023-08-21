@@ -1,0 +1,27 @@
+ apiVersion: apps/v1
+ # Specifying the kind as Deployment 
+ # because we want to deploy our application
+ kind: Deployment
+ metadata:
+   name: todo-app
+ spec:
+   selector:
+     matchLabels:
+       app: todo-app
+   template:
+     metadata:
+       labels:
+         app: todo-app
+     spec:
+       containers:
+       - name: todo-app-test-kubernetes
+       # Specify your DockerHub image 
+         image: yashgangwar123/todo-app:latest-from-github-action
+        #  resources:
+        #  # Specifying the resourses that we might need for our application
+        #    limits:
+        #      memory: "128Mi"
+        #      cpu: "500m"
+         ports:
+         # Exposed PORT
+         - containerPort: 3000
